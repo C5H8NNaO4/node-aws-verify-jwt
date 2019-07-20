@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "build": "./node_modules/.bin/babel src --out-dir lib",
-    "start": "nodemon --watch src --exec \"npm run build && babel-node lib/index.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -14,7 +13,6 @@
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.4",
     "@babel/node": "^7.2.2",
-    "nodemon": "^1.19.0",
     "@babel/preset-env": "^7.4.4"
   },
   "dependencies": {}
