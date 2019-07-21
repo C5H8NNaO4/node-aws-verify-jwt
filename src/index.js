@@ -1,3 +1,2 @@
 "use strict"
-
-//Babel 7 
+export * from './libs';
