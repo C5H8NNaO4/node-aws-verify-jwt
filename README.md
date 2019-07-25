@@ -8,3 +8,9 @@ Installs all the depencies needed to compile your project + nodemon.
 `npm run build`
  
  Runs `babel src --out-dir lib`
+
+## Test
+
+`npm run test`
+
+Runs jest 
