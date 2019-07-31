@@ -1,8 +1,26 @@
-Everything you need to get started with Babel 7. - Includes *nodemon* as dependency
+Verify AWS serverless cognito jwt tokens.
 
+#Quick Start
+    import { getPayload, verifyJWT } from   'node-serverless-verify-jwt';
+    
+    const payload = await getPayload({
+        jwtToken,
+        region,
+        userPoolID,
+    });
+    
+    const valid = await verifyJWT({
+        jwtToken: valid,
+        region,
+        userPoolID,
+        appClientID,
+        claims: {
+            client_id:      '22vik2co81f7reethfbm8sfat5b',
+            exp: (val) => val > ~~(+new Date    ()/1000)
+        },
+    });
 # Setup
-`npm install`
-Installs all the depencies needed to compile your project + nodemon. 
+`npm install node-serverless-verify-jwt`
 
 ## Build 
 `npm run build`

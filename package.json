@@ -1,6 +1,6 @@
 {
-  "name": "node-babel7-starter",
-  "version": "0.0.1",
+  "name": "node-serverless-verify-jwt",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -18,5 +18,9 @@
     "babel-polyfill": "^6.26.0",
     "jest": "^24.8.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "isomorphic-fetch": "^2.2.1",
+    "jose": "^0.3.2",
+    "node-jose": "^1.1.3"
+  }
 }
