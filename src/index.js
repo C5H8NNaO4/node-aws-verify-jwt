@@ -2,7 +2,7 @@ import jose from 'node-jose';
 import fetch from 'isomorphic-fetch';
 
 const keysURL = ({ region, userPoolID }) => `https://cognito-idp.${region}.amazonaws.com/${userPoolID}/.well-known/jwks.json`;
-const equals = claim => value => claim === value;
+const Equals = claim => value => claim === value;
 
 export const getPayload = async ({
   jwtToken, region, userPoolID,
@@ -65,7 +65,7 @@ export const verifyJWT = async ({
   for (const claim in claims) {
     if (Object.hasOwnProperty.call(claims, claim)) {
       const value = claims[claim];
-      const testValue = typeof value === 'function' ? claims[claim] : equals (claims[claim]);
+      const testValue = typeof value === 'function' ? claims[claim] : Equals(claims[claim]);
 
       if (!testValue(payload[claim])) {
         throw new Error(`Failed asserting claim ${claim} === ${testValue}.`);
