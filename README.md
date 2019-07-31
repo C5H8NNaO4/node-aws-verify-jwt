@@ -16,7 +16,7 @@ Verify AWS serverless cognito jwt tokens.
     
     //Verify the token and validate claims.
     const valid = await verifyJWT({
-        jwtToken: valid,
+        jwtToken,
         region,
         userPoolID,
         claims: {
