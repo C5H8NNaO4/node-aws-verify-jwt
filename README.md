@@ -1,26 +1,29 @@
 Verify AWS serverless cognito jwt tokens.
 
-#Quick Start
-    import { getPayload, verifyJWT } from   'node-serverless-verify-jwt';
+## Setup
+`npm install node-aws-verify-jwt`
+
+## Quick Start
+
+    import { getPayload, verifyJWT } from   'node-aws-verify-jwt';
     
+    //Verify integrity of the token and return the payload.
     const payload = await getPayload({
         jwtToken,
         region,
         userPoolID,
     });
     
+    //Verify the token and validate claims.
     const valid = await verifyJWT({
         jwtToken: valid,
         region,
         userPoolID,
-        appClientID,
         claims: {
-            client_id:      '22vik2co81f7reethfbm8sfat5b',
-            exp: (val) => val > ~~(+new Date    ()/1000)
+            client_id: '22vik2co81f7reethfbm8sfat5b',
+            exp: (val) => val > ~~(+new Date/1000)
         },
     });
-# Setup
-`npm install node-serverless-verify-jwt`
 
 ## Build 
 `npm run build`
